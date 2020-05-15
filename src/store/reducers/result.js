@@ -8,7 +8,7 @@ const resultsReducer = (state = initialState, action) => {
         case actionTypes.STORE_RESULT:
             return {
                 ...state,
-                results: state.results.concat({ id: new Date(), value: action.result }) //must be concat, push can create un predictable results
+                results: state.results.concat({ id: new Date(), value: action.result * 2 }) //must be concat, push can create un predictable results
             };
         case actionTypes.DELETE_RESULT:
             //const updatedArray = state.results.filter(el => true); //this return a new copy for thet array and for each element 
